@@ -1,0 +1,18 @@
+CREATE TABLE department (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50) NOT NULL
+);
+
+CREATE TABLE employee (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50) NOT NULL,
+    salary INT CHECK (salary > 0),
+    dept_id INT,
+    FOREIGN KEY (dept_id) REFERENCES department(dept_id)
+);
+
+INSERT INTO department VALUES (1, 'IT');
+
+INSERT INTO employee VALUES (101, 'Rohan', 50000, 1);
+
+SELECT * FROM employee;
