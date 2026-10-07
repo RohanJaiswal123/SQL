@@ -1,0 +1,14 @@
+SELECT employee.name, department.dept_name
+FROM employee
+LEFT JOIN department
+ON employee.dept_id = department.dept_id;
+
+SELECT employee.name, department.dept_name
+FROM employee
+RIGHT JOIN department
+ON employee.dept_id = department.dept_id;
+
+SELECT employee.name, department.dept_name
+FROM employee
+FULL JOIN department
+ON employee.dept_id = department.dept_id;
