@@ -1,0 +1,10 @@
+CREATE TABLE student (
+    id INT PRIMARY KEY,
+    name VARCHAR(50),
+    marks INT
+);
+INSERT INTO student VALUES (1, 'Aman', 85);
+INSERT INTO student VALUES (2, 'Rohan', 95);
+INSERT INTO student VALUES (3, 'Priya', 75);
+SELECT * FROM student
+WHERE marks > (SELECT AVG(marks) FROM student);
