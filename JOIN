@@ -1,0 +1,13 @@
+CREATE TABLE department (
+    dept_id INT PRIMARY KEY,
+    dept_name VARCHAR(50)
+);
+CREATE TABLE employee (
+    emp_id INT PRIMARY KEY,
+    name VARCHAR(50),
+    dept_id INT
+);
+INSERT INTO department VALUES (1, 'IT');
+INSERT INTO employee VALUES (101, 'Rohan', 1);
+SELECT e.name, d.dept_name FROM employee e
+JOIN department d ON e.dept_id = d.dept_id;
