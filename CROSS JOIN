@@ -1,4 +1,5 @@
 SELECT employee.name, department.dept_name
+
 FROM employee
 CROSS JOIN department;
 
